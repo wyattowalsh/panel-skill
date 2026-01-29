@@ -606,12 +606,3 @@ See [references/research-foundations.md](references/research-foundations.md) for
 
 panel-skill focuses on decision-making through expert dialogue.
 
----
-
-## Contact and Support
-
-**Maintainer**: panel-skill project
-**License**: MIT
-**Version**: 2.0
-
-For issues, feature requests, or contributions, follow standard GitHub workflow.
