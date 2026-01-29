@@ -8,7 +8,6 @@ Thank you for your interest in contributing to panel-skill!
 
 - Use the [bug report template](.github/ISSUE_TEMPLATE/bug_report.md) for bugs
 - Use the [feature request template](.github/ISSUE_TEMPLATE/feature_request.md) for enhancements
-- Use the [persona suggestion template](.github/ISSUE_TEMPLATE/persona_suggestion.md) for expert personas
 
 ### Pull Requests
 
@@ -74,4 +73,4 @@ Please read and follow our [Code of Conduct](../CODE_OF_CONDUCT.md).
 
 ## Questions?
 
-Open a [discussion](https://github.com/owner/panel-skill/discussions) for questions.
+Open a [discussion](https://github.com/wyattowalsh/panel-skill/discussions) for questions.

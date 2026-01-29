@@ -5,13 +5,15 @@ Expert panel discussions for complex decisions. Claude becomes 3-7 domain expert
 ## Install
 
 ```bash
-npx skills add owner/panel-skill
+npx skills add wyattowalsh/panel-skill
 ```
 
 ## Use
 
 ```bash
 /panel "Should we migrate to microservices?"
+/panel size:5 depth:deep "Build vs buy our CRM?"
+/panel style:adversarial "GraphQL vs REST?"
 ```
 
 ## Example
@@ -76,6 +78,9 @@ The design is grounded in multi-agent debate research:
 |--------|--------|---------|
 | `size` | 3-7 | auto |
 | `depth` | quick / standard / deep | standard |
+| `style` | collaborative / adversarial | collaborative |
+
+Low-complexity topics (e.g., "What port does PostgreSQL use?") trigger a warning before proceeding, as multi-agent debate is optimized for complex decision-making.
 
 ## Documentation
 

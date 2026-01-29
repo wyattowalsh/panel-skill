@@ -8,10 +8,10 @@ This document provides patterns, algorithms, and templates for generating meanin
 
 Synthesis mechanisms are critical to multi-agent discussion effectiveness:
 
-- **Self-Consistency via Discussion (PanelGPT)**: Framing consensus as discussion rather than voting improves outcomes—the discussion metaphor encourages reasoning, not just aggregation
-- **Argument-Quality Weighting**: Research shows majority voting can entrench initial errors due to LLM conformity; weighting by reasoning quality counteracts this
-- **Explicit Deliberation**: Requiring agents to explicitly agree/disagree and justify produces better syntheses than implicit aggregation
-- **Context-Dependent Conclusions**: Research indicates forcing binary consensus reduces accuracy; acknowledging "it depends" with specific conditions is more accurate
+- **Self-Consistency via Discussion (PanelGPT)** `[Research-Backed]`: Framing consensus as discussion rather than voting improves outcomes—the discussion metaphor encourages reasoning, not just aggregation
+- **Argument-Quality Weighting** `[Research-Backed: CISC (ACL 2025) - confidence weighting]`: Research shows majority voting can entrench initial errors due to LLM conformity; weighting by reasoning quality counteracts this
+- **Explicit Deliberation** `[Research-Backed]`: Requiring agents to explicitly agree/disagree and justify produces better syntheses than implicit aggregation
+- **Context-Dependent Conclusions** `[Research-Backed]`: Research indicates forcing binary consensus reduces accuracy; acknowledging "it depends" with specific conditions is more accurate
 
 ---
 
@@ -55,6 +55,8 @@ Synthesis mechanisms are critical to multi-agent discussion effectiveness:
 ---
 
 ## 2. Per-Round Synthesis Format
+
+> [Implementation Choice] The four-category structure below (Agreements, Productive Tensions, Open Questions, Emerging Insights) is a design pattern, not research-prescribed. The categories operationalize research findings about explicit deliberation and context-dependent conclusions.
 
 ### Standard Template
 
@@ -132,6 +134,8 @@ For each expert response:
 
 ### Step 2: Map Agreement Space
 
+> [Implementation Choice] The categorization of agreement types (Explicit, Implicit, Partial) and their tags are design patterns that facilitate synthesis generation, not research prescriptions.
+
 **Explicit Agreement:**
 - Same conclusion AND same reasoning
 - Tag: `[STRONG_CONSENSUS]`
@@ -147,6 +151,8 @@ For each expert response:
 - Action: Clearly separate agreed vs. contested elements
 
 ### Step 3: Categorize Disagreements
+
+> [Implementation Choice] The five-way categorization of disagreement types (Factual, Values-Based, Definitional, Methodological, Scope) is a design pattern. Research supports explicit deliberation and context-dependent conclusions, but doesn't prescribe these specific categories.
 
 **Factual Disagreements:**
 - Different empirical claims
@@ -229,6 +235,8 @@ Organizations should choose based on [specific decision criteria]."
 
 ### Consensus Labeling
 
+> [Implementation Choice] The five consensus labels below (UNANIMOUS, STRONG, MAJORITY, CONTESTED, CONTEXT-DEPENDENT) are design patterns that operationalize research findings about argument-quality weighting and context-dependent conclusions. Adjust labels as needed.
+
 Use precise labels:
 
 **UNANIMOUS CONSENSUS:**
@@ -241,7 +249,7 @@ Use precise labels:
 - Different reasoning paths converge
 - Format: "Unanimous conclusion via multiple reasoning paths..."
 
-**MAJORITY VIEW:**
+**MAJORITY VIEW:** `[Research-Backed: CISC confidence weighting, but avoid majority suppression per Wu et al.]`
 - Most experts agree (e.g., 3 of 4)
 - Minority view acknowledged
 - Format: "The majority position (N of M experts) is... However, Expert X notes..."
@@ -251,7 +259,7 @@ Use precise labels:
 - May be irreducible due to values/context
 - Format: "Experts are split between Position A and Position B, reflecting a genuine trade-off..."
 
-**CONTEXT-DEPENDENT:**
+**CONTEXT-DEPENDENT:** `[Research-Backed: acknowledging "it depends" with conditions per research]`
 - Different answers for different contexts
 - Not a failure to reach consensus, but recognition of complexity
 - Format: "The optimal approach depends on [specific factors]..."
@@ -302,6 +310,8 @@ From [Expertise Domain B]:
 ```
 
 ### Expertise-Weighted Synthesis
+
+> [Research-Backed] Weighting expert opinions by domain relevance and argument quality is supported by CISC (ACL 2025) research on confidence weighting. This counteracts the conformity bias identified in multi-agent systems.
 
 When expert relevance varies by topic:
 
@@ -356,6 +366,10 @@ Avoid Position B if: [warning sign]
 ```
 
 ### Constructive "It Depends" Conclusions
+
+> [Research-Backed] Acknowledging context-dependency rather than forcing binary consensus improves accuracy according to multi-agent debate research. The key is specifying WHAT it depends on.
+
+> [Implementation Choice] The decision matrix format below is a design pattern for operationalizing context-dependent conclusions, not a research prescription.
 
 Bad: "It depends on your situation."
 Good: "The optimal approach depends on three specific factors:"
@@ -785,3 +799,4 @@ Effective synthesis is an active, creative process, not passive summarization. I
 5. **Actionability** to provide specific guidance, not abstract observations
 
 The Hegelian dialectic succeeds when synthesis genuinely transcends thesis and antithesis—when the expert panel collectively reaches understanding that no individual expert possessed at the start.
+

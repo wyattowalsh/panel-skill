@@ -8,10 +8,10 @@ This document provides algorithms, templates, and guidelines for dynamically gen
 
 Expert generation is grounded in multi-agent debate research:
 
-- **PanelGPT (Sun et al., 2023)**: Established 3 experts as baseline for panel discussions, demonstrating that multi-expert framing improves reasoning (0.899 vs 0.854 accuracy on GSM8K)
-- **Multi-Agent Debate (Du et al., 2023)**: Showed heterogeneous agent configurations outperform homogeneous ones (91% vs 82% on GSM-8K)
-- **Agreement Calibration**: Research shows ~90% collaborative / ~10% adversarial ratio yields optimal outcomes; pure devil's advocate approaches reduce accuracy
-- **Conformity Mitigation**: LLMs exhibit conformity bias; diverse perspectives and required contrarian roles counteract this
+- **PanelGPT (Sun et al., 2023)** `[Research-Backed]`: Established 3 experts as baseline for panel discussions, demonstrating that multi-expert framing improves reasoning (0.899 vs 0.854 accuracy on GSM8K)
+- **Multi-Agent Debate (Du et al., 2023)** `[Research-Backed]`: Showed heterogeneous agent configurations outperform homogeneous ones (91% vs 82% on GSM-8K)
+- **Agreement Calibration** `[Research-Backed]`: Research shows ~90% collaborative / ~10% adversarial ratio yields optimal outcomes; pure devil's advocate approaches reduce accuracy
+- **Conformity Mitigation** `[Research-Backed]`: LLMs exhibit conformity bias; diverse perspectives and required contrarian roles counteract this
 
 ---
 
@@ -24,7 +24,7 @@ Expert generation is grounded in multi-agent debate research:
    - Tag industry/sector references (healthcare, finance, etc.)
    - Flag constraint keywords (security, performance, cost, UX)
 
-2. **Classify Topic Breadth**
+2. **Classify Topic Breadth** `[Implementation Choice]`
    - **Narrow**: Single technology/specific implementation (3-4 experts)
    - **Medium**: Cross-functional decision (4-5 experts)
    - **Broad**: Strategic/organizational change (5-7 experts)
@@ -145,17 +145,23 @@ likely_positions:
 
 ## Diversity Enforcement Rules
 
+> [Research-Backed] The need for heterogeneous perspectives is strongly supported by Wu et al. (2025) showing diversity as THE dominant driver of multi-agent debate quality, and A-HMAD (2025) demonstrating heterogeneous agents outperform homogeneous configurations.
+
+> [Implementation Choice] The specific rules below (contrarian requirement, synthesizer requirement, archetype caps) are design decisions that operationalize research findings. Adjust based on empirical results from your panel discussions.
+
 ### Mandatory Requirements
 
-1. **At least one Contrarian**: Prevents echo chamber
+1. **At least one Contrarian**: Prevents echo chamber `[Research-Backed: Wu et al. - majority suppresses correction]`
 2. **At least one Synthesizer**: Facilitates productive discussion
 3. **At least one Specialist**: Grounds discussion in reality
-4. **No more than 2 experts with same primary archetype**
+4. **No more than 2 experts with same primary archetype** `[Implementation Choice: 30% same-archetype cap]`
 5. **At least 2 different domain areas** (for medium+ breadth topics)
 
 ### Distribution Patterns by Topic Breadth
 
-**Narrow Topics (3-4 experts)**
+> [Implementation Choice] Panel size thresholds below (3-4, 4-5, 5-7) are based on practical experience, not research prescriptions. Du et al. (2023) established 3 agents × 2 rounds as baseline, but specific size-to-breadth mappings are design decisions.
+
+**Narrow Topics (3-4 experts)** `[Research-Backed: 3 agents baseline per Du et al.]`
 ```
 - 2 Specialists (different sub-domains or approaches)
 - 1 Contrarian/Skeptic
@@ -807,8 +813,3 @@ def extract_domains(topic: str) -> list:
 - Design thinking personas (realistic character creation)
 - Socratic method (productive disagreement techniques)
 
----
-
-**Last Updated**: 2026-01-28
-**Version**: 1.0
-**Maintainer**: panel-skill project

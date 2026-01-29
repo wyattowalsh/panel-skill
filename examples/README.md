@@ -24,7 +24,7 @@ These examples demonstrate:
 
 ```bash
 # Install the skill
-npx skills add owner/panel-skill
+npx skills add wyattowalsh/panel-skill
 
 # Run a panel discussion
 /panel "Your topic here"

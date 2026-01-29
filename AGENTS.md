@@ -48,9 +48,10 @@ panel-skill/
 
 **SKILL.md** (Core Workflow)
 - YAML frontmatter defines skill metadata (name, trigger, description)
-- Markdown body contains step-by-step instructions for Claude
+- Markdown body contains step-by-step instructions for Claude (~450 lines)
 - Orchestrates: expert generation → panel discussion → synthesis → output formatting
-- Self-contained: all critical logic is embedded
+- Progressive disclosure: Uses `Read references/X.md` pattern to load detailed algorithms dynamically as needed
+- Self-contained: all critical logic is embedded, with reference files loaded on-demand
 
 **references/** (Pattern Library)
 - Expert generation algorithms and persona templates
@@ -202,6 +203,18 @@ npx skills add ./
 /panel "Should we use microservices?"
 ```
 
+**Test argument parsing:**
+```bash
+/panel size:4 depth:deep "Should we migrate to Kubernetes?"
+/panel style:adversarial "GraphQL vs REST?"
+```
+
+**Test low-complexity warning:**
+```bash
+/panel "What port does PostgreSQL use?"
+```
+Expected: Warning about low complexity, option to proceed or cancel
+
 **Verify output quality:**
 1. Check that 3-5 experts are generated with distinct perspectives
 2. Verify turn-taking feels natural (not robotic)
@@ -271,7 +284,7 @@ Key algorithm:
 
 **See**: `references/turn-taking.md`
 
-Based on multi-agent debate research (Du et al., 2023; PanelGPT, Sun et al., 2023):
+Based on multi-agent debate research (Du et al., ICML 2024; PanelGPT, Sun et al., 2023):
 - Self-selection triggers (relevance, disagreement, building)
 - Moderator orchestration (balance participation, redirect tangents)
 - User intervention points (natural pauses for questions)
@@ -398,6 +411,8 @@ When revising prompts in SKILL.md:
 ### Pull Request Checklist
 
 - [ ] SKILL.md changes are clear and directive (not vague)
+- [ ] SKILL.md body ≤ 500 lines
+- [ ] Reference file loading instructions present
 - [ ] Changes tested with at least 3 different topic types
 - [ ] Reference docs updated if algorithms changed
 - [ ] AGENTS.md updated if new patterns added
@@ -589,11 +604,5 @@ panel-skill focuses on decision-making through expert dialogue.
 
 **Maintainer**: panel-skill project
 **License**: MIT
-**Version**: 1.0
-**Last Updated**: 2026-01-28
 
 For issues, feature requests, or contributions, follow standard GitHub workflow.
-
----
-
-*This AGENTS.md provides all context needed for AI agents to work effectively on the panel-skill project. Follow these guidelines to maintain quality and consistency.*

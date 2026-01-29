@@ -109,6 +109,3 @@ The following should NOT appear:
 - [ ] Expertise mismatch (wrong expert on topic)
 - [ ] Conformity cascade (majority drowns out dissent)
 
----
-
-**Last Updated**: 2026-01-29

@@ -905,13 +905,3 @@ architect yourself into a corner."
 9. **Menus**: Present at natural pause points
 10. **Reports**: Comprehensive but scannable structure
 
----
-
-## Version History
-
-- v1.0 (2026-01-28): Initial format specification
-- Future: May add support for visual elements, charts, or diagrams
-
----
-
-*This reference document should be used by Claude Code when generating panel discussion output. Follow formats exactly as shown for consistency.*
