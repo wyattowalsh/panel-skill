@@ -16,5 +16,7 @@ jobs:
       - name: Check links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --verbose --no-progress '**/*.md'
+          # Exclude symlinks (CLAUDE.md, copilot-instructions.md) - they point to AGENTS.md
+          # and lychee resolves relative paths from symlink location, not target location
+          args: --verbose --no-progress --exclude-path 'CLAUDE.md' --exclude-path '.github/copilot-instructions.md' '**/*.md'
           fail: true

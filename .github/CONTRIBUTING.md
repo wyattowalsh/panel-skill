@@ -6,8 +6,8 @@ Thank you for your interest in contributing to panel-skill!
 
 ### Reporting Issues
 
-- Use the [bug report template](.github/ISSUE_TEMPLATE/bug_report.md) for bugs
-- Use the [feature request template](.github/ISSUE_TEMPLATE/feature_request.md) for enhancements
+- Use the [bug report template](ISSUE_TEMPLATE/bug_report.md) for bugs
+- Use the [feature request template](ISSUE_TEMPLATE/feature_request.md) for enhancements
 
 ### Pull Requests
 
@@ -15,7 +15,7 @@ Thank you for your interest in contributing to panel-skill!
 2. Create a feature branch: `git checkout -b feature/your-feature`
 3. Make your changes following the guidelines below
 4. Test with diverse topics (technical, strategic, values-based)
-5. Submit a pull request using the [PR template](.github/pull_request_template.md)
+5. Submit a pull request using the [PR template](pull_request_template.md)
 
 ## Development Guidelines
 

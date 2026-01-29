@@ -34,7 +34,7 @@ If applicable, cite research that supports these changes:
 
 ## Checklist
 
-- [ ] I have read the [CONTRIBUTING.md](.github/CONTRIBUTING.md) guidelines
+- [ ] I have read the [CONTRIBUTING.md](CONTRIBUTING.md) guidelines
 - [ ] My changes follow the project's markdown style
 - [ ] I have updated documentation if needed
 - [ ] I have added examples if adding new features
