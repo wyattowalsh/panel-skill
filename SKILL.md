@@ -1,7 +1,6 @@
 ---
 name: panel
-description: Host interactive expert panel discussions on any topic. Dynamically generates master-level expert personas, facilitates structured debate using Hegelian dialectic patterns, and synthesizes consensus. Use when exploring complex topics, making architectural decisions, evaluating trade-offs, or seeking diverse expert perspectives. Triggers on "panel discussion", "expert debate", "get multiple perspectives", "what would experts say about", "/panel".
-argument-hint: "[topic]" or "size:N depth:quick|standard|deep style:collaborative|adversarial|academic [topic]"
+description: Host interactive expert panel discussions on any topic. Dynamically generates master-level expert personas, facilitates structured debate using Hegelian dialectic patterns, and synthesizes consensus. Use when exploring complex topics, making architectural decisions, evaluating trade-offs, or seeking diverse expert perspectives. Triggers on "panel discussion", "expert debate", "get multiple perspectives", "what would experts say about", "/panel". Usage: /panel "[topic]" or /panel size:N depth:quick|standard|deep style:collaborative|adversarial|academic "[topic]"
 allowed-tools: WebSearch Read Grep
 ---
 
