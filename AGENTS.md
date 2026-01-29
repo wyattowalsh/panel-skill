@@ -612,5 +612,6 @@ panel-skill focuses on decision-making through expert dialogue.
 
 **Maintainer**: panel-skill project
 **License**: MIT
+**Version**: 2.0
 
 For issues, feature requests, or contributions, follow standard GitHub workflow.

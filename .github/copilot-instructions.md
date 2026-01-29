@@ -5,8 +5,9 @@ This file provides context for GitHub Copilot when working on this repository.
 ## Project Overview
 
 panel-skill is a Claude Code skill that hosts interactive expert panel discussions.
-It's a pure markdown skill with no code runtime - all logic is embedded in SKILL.md
-as structured prompts.
+It's a pure markdown skill with no code runtime. SKILL.md contains lean execution
+directives (~150 lines), with detailed algorithms in `references/` for progressive
+disclosure.
 
 ## Key Concepts
 
@@ -21,9 +22,10 @@ All major design decisions are grounded in multi-agent debate research:
 
 ### File Structure
 
-- `SKILL.md` - Main entry point, contains all core logic
+- `SKILL.md` - Main entry point, lean execution directives (~150 lines)
+- `README.md` - User-facing docs with research context
 - `AGENTS.md` - AI development guide
-- `references/` - Pattern documentation (expert generation, turn-taking, synthesis)
+- `references/` - Detailed algorithms (expert generation, turn-taking, synthesis, research)
 - `examples/` - Example panel discussions
 - `tests/` - Development testing resources
 
@@ -75,8 +77,8 @@ When creating or editing expert personas:
 
 1. Add full citation to `references/research-foundations.md`
 2. Update "Design Principle Mappings" table
-3. Reference in relevant SKILL.md sections
-4. Update README.md research table if major finding
+3. Update README.md research table if major finding
+4. Add `[Research-Backed]` labels to affected reference files
 
 ## Testing Changes
 
