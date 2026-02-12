@@ -24,11 +24,11 @@ These examples demonstrate:
 
 ```bash
 # Install the skill
-npx skills add wyattowalsh/panel-skill
+npx skills add wyattowalsh/panel-debate-skill
 
 # Run a panel discussion
-/panel "Your topic here"
+/panel-debate "Your topic here"
 
 # With configuration
-/panel size:5 depth:deep "Complex strategic question"
+/panel-debate size:5 depth:deep "Complex strategic question"
 ```

@@ -1,0 +1,24 @@
+name: Skill Validation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'SKILL.md'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'SKILL.md'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install skills-ref
+        run: pip install skills-ref
+      - name: Validate SKILL.md
+        run: skills-ref validate .

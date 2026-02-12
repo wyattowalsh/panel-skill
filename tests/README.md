@@ -1,10 +1,10 @@
 # Panel Skill Testing
 
-Development-only testing resources for validating panel-skill functionality.
+Development-only testing resources for validating panel-debate-skill functionality.
 
 ## Purpose
 
-These files help developers verify that changes to panel-skill work correctly
+These files help developers verify that changes to panel-debate-skill work correctly
 across different topic types and configurations.
 
 ## Contents
@@ -16,7 +16,7 @@ across different topic types and configurations.
 
 1. Install the skill locally:
    ```bash
-   cd /path/to/panel-skill
+   cd /path/to/panel-debate-skill
    npx skills add ./
    ```
 

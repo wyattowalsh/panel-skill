@@ -1,7 +1,7 @@
 # Research Foundations
 
 This document provides comprehensive citations for the research underpinning
-the panel-skill design. Major design decisions are grounded in a combination of
+the panel-debate-skill design. Major design decisions are grounded in a combination of
 peer-reviewed research and research demonstrations.
 
 ---
@@ -20,7 +20,7 @@ peer-reviewed research and research demonstrations.
   2. Cross-examination reduces hallucinations and improves factuality
   3. 3 agents × 2 rounds is an effective baseline configuration
   4. Performance scales with both agent count and debate rounds
-- **Implementation in panel-skill**:
+- **Implementation in panel-debate-skill**:
   - Default 2-3 round structure
   - Cross-examination phase after opening statements
   - Multiple distinct expert perspectives
@@ -40,7 +40,7 @@ peer-reviewed research and research demonstrations.
      rather than maintain dissenting positions
   4. Effective teams can overturn incorrect consensus when diversity is high
   5. Homogeneous teams entrench errors rather than correct them
-- **Implementation in panel-skill**:
+- **Implementation in panel-debate-skill**:
   - **Diversity scoring** (≥60 points required before panel proceeds)
   - **Contrarian protection protocol** (explicit dissent solicitation)
   - **No more than 30% same-archetype** rule
@@ -54,7 +54,7 @@ peer-reviewed research and research demonstrations.
   2. Debate outperforms single-model on complex tasks (JudgeBench, TruthfulQA)
   3. Stability detection improves stopping decisions
   4. Diminishing returns after optimal number of rounds
-- **Implementation in panel-skill**:
+- **Implementation in panel-debate-skill**:
   - Complexity-appropriate panel sizing
   - Round synthesis to detect convergence
   - Early termination option when consensus is clear
@@ -69,7 +69,7 @@ peer-reviewed research and research demonstrations.
   2. Dynamic debate strategies needed based on task type
   3. Simple majority voting underperforms quality-weighted aggregation
   4. Role specialization improves overall debate quality
-- **Implementation in panel-skill**:
+- **Implementation in panel-debate-skill**:
   - Mandatory archetype heterogeneity (Contrarian, Synthesizer, Specialist)
   - No more than 2 experts with same primary archetype
   - Adaptive moderation based on discussion state
@@ -84,7 +84,7 @@ peer-reviewed research and research demonstrations.
      by 40%+ while maintaining accuracy
   2. Confidence signals correlate with correctness
   3. Weighted aggregation outperforms simple majority
-- **Implementation in panel-skill**:
+- **Implementation in panel-debate-skill**:
   - Expert confidence signals (high/medium/low)
   - Domain expertise weighting
   - Confidence-weighted synthesis formula
@@ -96,7 +96,7 @@ peer-reviewed research and research demonstrations.
   1. Role assignment improves agent specialization
   2. Orchestration + debate combination effective for coordination
   3. Expert role specialization enables deeper domain knowledge
-- **Implementation in panel-skill**:
+- **Implementation in panel-debate-skill**:
   - Explicit role assignment in expert personas
   - Domain-specific expertise requirements
   - Moderator orchestration role
@@ -112,7 +112,7 @@ peer-reviewed research and research demonstrations.
   3. Combining different prompting methods (Chain-of-Thought, Tree-of-Thought,
      etc.) increases exploration
   4. Mental set is a key limitation in single-method debates
-- **Implementation in panel-skill**:
+- **Implementation in panel-debate-skill**:
   - Mandatory diverse reasoning archetypes (Contrarian, Synthesizer, Specialist)
   - No more than 30% same-archetype rule
   - Encourages cognitive diversity beyond just perspective diversity
@@ -128,7 +128,7 @@ peer-reviewed research and research demonstrations.
   3. Judge-based debate structure improves over pure peer debate
   4. Divergent thinking in early rounds followed by convergence improves
      final quality
-- **Implementation in panel-skill**:
+- **Implementation in panel-debate-skill**:
   - Contrarian protection protocol prevents premature convergence
   - Turn-taking mechanics require addressing previous points
   - Moderator acts as judge to redirect premature consensus
@@ -147,7 +147,7 @@ peer-reviewed research and research demonstrations.
   2. "Step by step" + "ensure correctness" prompting components are additive
   3. Treating the model as multiple experts creates productive cognitive diversity
   4. Self-consistency via discussion metaphor improves over voting
-- **Implementation in panel-skill**:
+- **Implementation in panel-debate-skill**:
   - Multi-expert persona generation
   - Structured discussion phases
   - Synthesis through discussion, not aggregation
@@ -161,7 +161,7 @@ peer-reviewed research and research demonstrations.
      strategies on EASY tasks**, even with increased compute
   2. MAD provides significant gains on COMPLEX tasks
   3. Overhead of multi-agent debate not justified for simple questions
-- **Implementation in panel-skill**:
+- **Implementation in panel-debate-skill**:
   - **Topic complexity classifier** (5-15 scoring scale)
   - Low-complexity topics (score 5-7) rejected for panel discussion
   - Direct answer recommended instead of panel overhead
@@ -211,7 +211,7 @@ peer-reviewed research and research demonstrations.
 
 ## Anti-Patterns from Research
 
-Research identifies these failure modes (which panel-skill actively avoids):
+Research identifies these failure modes (which panel-debate-skill actively avoids):
 
 ### 1. Conformity Cascade
 - **Problem**: LLMs tend toward majority positions, entrenching early errors

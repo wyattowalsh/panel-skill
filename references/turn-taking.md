@@ -1,5 +1,22 @@
 # Turn-Taking Mechanics for Expert Panel Discussions
 
+## Contents
+
+- [Overview](#overview)
+- [Research Foundations](#research-foundations)
+- [Core Principles](#core-principles)
+- [1. Adjacency Pair Patterns](#1-adjacency-pair-patterns)
+- [2. Self-Selection Mechanics](#2-self-selection-mechanics)
+- [3. Moderator Orchestration Rules](#3-moderator-orchestration-rules)
+- [4. User Intervention Points](#4-user-intervention-points)
+- [5. Turn Order Patterns](#5-turn-order-patterns)
+- [6. Handling Edge Cases](#6-handling-edge-cases)
+- [7. Example Turn Sequences](#7-example-turn-sequences)
+- [8. Implementation Guidelines](#8-implementation-guidelines)
+- [9. Quality Metrics](#9-quality-metrics)
+- [10. Adaptation Notes](#10-adaptation-notes)
+- [Conclusion](#conclusion)
+
 ## Overview
 
 This document defines turn-taking rules for multi-expert panel discussions. The goal is to create natural, engaging discussions that leverage multiple expert perspectives while maintaining coherent flow.

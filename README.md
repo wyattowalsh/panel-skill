@@ -1,12 +1,6 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.png">
-  <img alt="panel-skill banner" src="assets/banner-dark.png">
-</picture>
-
 <div align="center">
 
-# panel-skill
+# panel-debate-skill
 
 **Expert panel discussions for complex decisions**
 
@@ -24,18 +18,18 @@ Claude becomes 3-7 domain experts who debate, challenge each other, and synthesi
 ## Install
 
 ```bash
-npx skills add wyattowalsh/panel-skill
+npx skills add wyattowalsh/panel-debate-skill
 ```
 
 > [!TIP]
-> After installation, the `/panel` command becomes available in Claude Code.
+> After installation, the `/panel-debate` command becomes available in Claude Code.
 
 ## Usage
 
 ```bash
-/panel "Should we migrate to microservices?"
-/panel size:5 depth:deep "Build vs buy our CRM?"
-/panel style:adversarial "GraphQL vs REST?"
+/panel-debate "Should we migrate to microservices?"
+/panel-debate size:5 depth:deep "Build vs buy our CRM?"
+/panel-debate style:adversarial "GraphQL vs REST?"
 ```
 
 ### Options
@@ -192,7 +186,7 @@ Prioritizing high-confidence reasoning paths reduces required samples by 40%+ wh
 ### Anti-Patterns Avoided
 
 > [!CAUTION]
-> Research identifies these failure modes—panel-skill actively prevents them:
+> Research identifies these failure modes—panel-debate-skill actively prevents them:
 
 | Anti-Pattern | Problem | Mitigation |
 |:-------------|:--------|:-----------|
@@ -224,7 +218,7 @@ Each round's synthesis becomes the next round's thesis, enabling **progressive r
 ## Architecture
 
 ```
-panel-skill/
+panel-debate-skill/
 ├── SKILL.md              # Entry point (~150 lines)
 ├── AGENTS.md             # AI agent instructions
 ├── CLAUDE.md             # → symlink to AGENTS.md
@@ -257,13 +251,13 @@ See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for guidelines.
 npx skills add ./
 
 # Test complexity rejection
-/panel "What port does PostgreSQL use?"
+/panel-debate "What port does PostgreSQL use?"
 
 # Test standard panel
-/panel "Redis vs Memcached?"
+/panel-debate "Redis vs Memcached?"
 
 # Test deep panel
-/panel depth:deep "Microservices migration strategy"
+/panel-debate depth:deep "Microservices migration strategy"
 ```
 
 </details>

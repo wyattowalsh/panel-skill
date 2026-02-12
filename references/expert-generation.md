@@ -1,5 +1,22 @@
 # Expert Generation Reference
 
+## Contents
+
+- [Overview](#overview)
+- [Research Foundations](#research-foundations)
+- [Topic Analysis Algorithm](#topic-analysis-algorithm)
+- [Persona Template](#persona-template)
+- [Perspective Archetypes](#perspective-archetypes)
+- [Diversity Enforcement Rules](#diversity-enforcement-rules)
+- [Example Personas by Topic Type](#example-personas-by-topic-type)
+- [Dynamic Generation Prompts](#dynamic-generation-prompts)
+- [Edge Case Handling](#edge-case-handling)
+- [Validation Checklist](#validation-checklist)
+- [Anti-Patterns to Avoid](#anti-patterns-to-avoid)
+- [Implementation Notes](#implementation-notes)
+- [Appendix: Perspective Mixing Matrix](#appendix-perspective-mixing-matrix)
+- [References and Inspiration](#references--inspiration)
+
 ## Overview
 
 This document provides algorithms, templates, and guidelines for dynamically generating expert personas for panel discussions. The system must produce 3-7 experts with diverse perspectives and complementary expertise.

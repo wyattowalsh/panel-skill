@@ -20,6 +20,5 @@ jobs:
           args: >-
             --verbose --no-progress
             --exclude-path 'CLAUDE.md'
-            --exclude-path '.github/copilot-instructions.md'
             '**/*.md'
           fail: true

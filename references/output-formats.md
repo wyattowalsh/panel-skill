@@ -1,6 +1,6 @@
 # Panel Skill Output Formats Reference
 
-This document defines the exact output formats for the panel-skill CLI streaming interface. All formats are designed for monospace terminal display and should be reproduced exactly as shown.
+This document defines the exact output formats for the panel-debate-skill CLI streaming interface. All formats are designed for monospace terminal display and should be reproduced exactly as shown.
 
 ---
 

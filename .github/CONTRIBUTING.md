@@ -1,6 +1,6 @@
-# Contributing to panel-skill
+# Contributing to panel-debate-skill
 
-Thank you for your interest in contributing to panel-skill!
+Thank you for your interest in contributing to panel-debate-skill!
 
 ## How to Contribute
 
@@ -39,14 +39,14 @@ Thank you for your interest in contributing to panel-skill!
 After making changes, test with:
 
 ```bash
-cd /path/to/panel-skill
+cd /path/to/panel-debate-skill
 npx skills add ./
 
 # Test cases
-/panel "What port does PostgreSQL use?"  # Should reject (low complexity)
-/panel "Redis vs Memcached?"              # Standard panel
-/panel depth:deep "Microservices strategy" # Deep panel
-/panel "Should we collect user analytics?" # Values-based
+/panel-debate "What port does PostgreSQL use?"  # Should reject (low complexity)
+/panel-debate "Redis vs Memcached?"              # Standard panel
+/panel-debate depth:deep "Microservices strategy" # Deep panel
+/panel-debate "Should we collect user analytics?" # Values-based
 ```
 
 Verify:
@@ -73,4 +73,4 @@ Please read and follow our [Code of Conduct](../CODE_OF_CONDUCT.md).
 
 ## Questions?
 
-Open a [discussion](https://github.com/wyattowalsh/panel-skill/discussions) for questions.
+Open a [discussion](https://github.com/wyattowalsh/panel-debate-skill/discussions) for questions.

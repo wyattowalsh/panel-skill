@@ -1,5 +1,20 @@
 # Synthesis Patterns Reference
 
+## Contents
+
+- [Research Foundations](#research-foundations)
+- [1. Hegelian Dialectic Fundamentals](#1-hegelian-dialectic-fundamentals)
+- [2. Per-Round Synthesis Format](#2-per-round-synthesis-format)
+- [3. Synthesis Generation Algorithm](#3-synthesis-generation-algorithm)
+- [4. Final Consensus Generation](#4-final-consensus-generation)
+- [5. Handling Unresolved Tensions](#5-handling-unresolved-tensions)
+- [6. Templates for Synthesis Statements](#6-templates-for-synthesis-statements)
+- [7. Examples: Raw Discussion to Synthesis](#7-examples-raw-discussion--synthesis)
+- [8. Quality Checklist for Syntheses](#8-quality-checklist-for-syntheses)
+- [9. Anti-Patterns and Failure Modes](#9-anti-patterns-and-failure-modes)
+- [10. Meta-Synthesis: When the Process Itself Provides Insight](#10-meta-synthesis-when-the-process-itself-provides-insight)
+- [Conclusion](#conclusion)
+
 This document provides patterns, algorithms, and templates for generating meaningful syntheses from expert panel discussions using Hegelian dialectic principles.
 
 ---

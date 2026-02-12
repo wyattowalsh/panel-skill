@@ -1,6 +1,6 @@
 # Canonical Test Topics
 
-Use these topics to validate panel-skill functionality across different
+Use these topics to validate panel-debate-skill functionality across different
 complexity levels and topic types.
 
 ---

@@ -1,12 +1,12 @@
-# AGENTS.md - panel-skill Development Guide
+# AGENTS.md - panel-debate-skill Development Guide
 
-AI agent development instructions for the panel-skill project.
+AI agent development instructions for the panel-debate-skill project.
 
 ---
 
 ## Project Overview
 
-**panel-skill** is a Claude Code skill that hosts interactive expert panel discussions. It facilitates multi-expert debates where Claude plays the role of multiple domain experts with distinct perspectives, engaging in structured dialogue that produces actionable synthesis through Hegelian dialectic.
+**panel-debate-skill** is a Claude Code skill that hosts interactive expert panel discussions. It facilitates multi-expert debates where Claude plays the role of multiple domain experts with distinct perspectives, engaging in structured dialogue that produces actionable synthesis through Hegelian dialectic.
 
 ### Key Characteristics
 
@@ -18,7 +18,7 @@ AI agent development instructions for the panel-skill project.
 
 ### What Makes This Different
 
-Unlike code-based skills, panel-skill is a **prompt-engineered interaction pattern**. The skill file itself contains structured instructions that guide Claude through:
+Unlike code-based skills, panel-debate-skill is a **prompt-engineered interaction pattern**. The skill file itself contains structured instructions that guide Claude through:
 1. Generating diverse expert personas
 2. Facilitating natural turn-taking dialogue
 3. Synthesizing insights using dialectic principles
@@ -31,7 +31,7 @@ Unlike code-based skills, panel-skill is a **prompt-engineered interaction patte
 ### File Structure
 
 ```
-panel-skill/
+panel-debate-skill/
 ├── SKILL.md                      # Main entry point (frontmatter + workflow)
 ├── AGENTS.md                     # This file
 ├── README.md                     # User-facing docs with research context
@@ -67,10 +67,6 @@ panel-skill/
 - Synthesis generation using Hegelian dialectic
 - Terminal UI formatting specifications
 - These files are REFERENCED by SKILL.md but not executed directly
-
-**scripts/** (Optional)
-- Testing utilities (e.g., validate output format)
-- Not required for core skill functionality
 
 ---
 
@@ -208,18 +204,18 @@ npx skills add ./
 **Test basic trigger:**
 ```bash
 # In Claude Code CLI
-/panel "Should we use microservices?"
+/panel-debate "Should we use microservices?"
 ```
 
 **Test argument parsing:**
 ```bash
-/panel size:4 depth:deep "Should we migrate to Kubernetes?"
-/panel style:adversarial "GraphQL vs REST?"
+/panel-debate size:4 depth:deep "Should we migrate to Kubernetes?"
+/panel-debate style:adversarial "GraphQL vs REST?"
 ```
 
 **Test low-complexity warning:**
 ```bash
-/panel "What port does PostgreSQL use?"
+/panel-debate "What port does PostgreSQL use?"
 ```
 Expected: Warning about low complexity, option to proceed or cancel
 
@@ -234,25 +230,25 @@ Expected: Warning about low complexity, option to proceed or cancel
 
 **1. Technical Architecture Question**
 ```bash
-/panel "Should we migrate from PostgreSQL to MongoDB?"
+/panel-debate "Should we migrate from PostgreSQL to MongoDB?"
 ```
 Expected: 3-4 experts (DB specialist, backend engineer, data analyst, ops)
 
 **2. Broad Strategic Question**
 ```bash
-/panel "Should we implement a 4-day work week?"
+/panel-debate "Should we implement a 4-day work week?"
 ```
 Expected: 5-7 experts (HR, economist, employee advocate, productivity researcher, CEO perspective)
 
 **3. Narrow Implementation Question**
 ```bash
-/panel "Should we use GraphQL or REST for our API?"
+/panel-debate "Should we use GraphQL or REST for our API?"
 ```
 Expected: 3 experts (backend specialists with different takes)
 
 **4. Values-Based Question**
 ```bash
-/panel "Should we collect user analytics data?"
+/panel-debate "Should we collect user analytics data?"
 ```
 Expected: Tension between privacy advocate and business strategist, context-dependent synthesis
 
@@ -442,7 +438,7 @@ When reviewing PRs:
 
 ### Token Efficiency
 
-panel-skill is relatively token-heavy due to:
+panel-debate-skill is relatively token-heavy due to:
 - Multiple expert personas (each with background)
 - Extended dialogue (multiple rounds)
 - Comprehensive synthesis
@@ -465,7 +461,7 @@ Streaming output improves perceived performance:
 
 ## AI Agent Configuration
 
-When AI agents work on panel-skill, they should be aware of these configuration requirements:
+When AI agents work on panel-debate-skill, they should be aware of these configuration requirements:
 
 ### Model Recommendations
 
@@ -496,7 +492,7 @@ Panel-skill updates benefit from parallel agent execution:
 
 ### Quality Gates
 
-Before completing work on panel-skill, verify:
+Before completing work on panel-debate-skill, verify:
 
 1. **Research alignment**: Changes cite supporting research
 2. **Diversity enforcement**: Panel composition rules followed
@@ -513,13 +509,13 @@ After making changes:
 npx skills add ./
 
 # Test complexity rejection
-/panel "What port does PostgreSQL use?"
+/panel-debate "What port does PostgreSQL use?"
 
 # Test standard panel
-/panel "Redis vs Memcached?"
+/panel-debate "Redis vs Memcached?"
 
 # Test deep panel
-/panel depth:deep "Microservices migration strategy"
+/panel-debate depth:deep "Microservices migration strategy"
 ```
 
 ---
@@ -551,13 +547,13 @@ To understand what's happening:
 
 ## Future Enhancements
 
-Potential additions to panel-skill:
+Potential additions to panel-debate-skill:
 
 1. **Multi-round deep dives**: Allow user to select one tension and spawn new panel
 2. **Expert persistence**: Reuse expert panel across related questions
 3. **Visualization**: ASCII diagrams showing agreement/disagreement topology
 4. **Export formats**: Markdown, PDF, or structured JSON output
-5. **Skill composition**: Chain panel-skill output into other skills
+5. **Skill composition**: Chain panel-debate-skill output into other skills
 
 When implementing:
 - Maintain pure markdown approach (no code dependencies)
@@ -578,7 +574,7 @@ When implementing:
 
 ### Research Foundations
 
-The panel-skill design is grounded in peer-reviewed multi-agent debate research:
+The panel-debate-skill design is grounded in peer-reviewed multi-agent debate research:
 
 | Paper | Key Finding | Implementation |
 |-------|-------------|----------------|
@@ -604,5 +600,5 @@ See [references/research-foundations.md](references/research-foundations.md) for
 - `/review-pr` skill: Pull request review
 - `/plan` skill: Project planning
 
-panel-skill focuses on decision-making through expert dialogue.
+panel-debate-skill focuses on decision-making through expert dialogue.
 

@@ -1,7 +1,7 @@
 # Panel Output Quality Checklist
 
 Use this checklist to validate panel discussion outputs after making changes
-to panel-skill.
+to panel-debate-skill.
 
 ---
 
