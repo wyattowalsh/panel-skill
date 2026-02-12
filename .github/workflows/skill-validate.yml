@@ -18,7 +18,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Install skills-ref
-        run: pip install skills-ref
       - name: Validate SKILL.md
-        run: skills-ref validate .
+        run: pipx run skills-ref validate .
